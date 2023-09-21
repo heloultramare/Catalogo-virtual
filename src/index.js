@@ -9,54 +9,51 @@ import ErroPage from './pages/ErroPage';
 import App from './pages/App';
 import CadastroProduto from './pages/CadastroProduto';
 import "./App.css";
+import { CssBaseline } from '@mui/material';
 
 const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#1565c0',
-      light: '#40c4ff',
-      dark: '#0d47a1',
-      contrastText: '#e0e0e0',
+      main: '#f58980',
+      dark: 'rgb(171, 95, 89)',
+      light: '#f7a099',
+      contrastText: 'rgba(0,0,0,0.87)',
     },
     secondary: {
-      main: '#78909c',
-      light: '#ff0700',
-      dark: '#ff1000',
-    },
-    text: {
-      primary: '#263238',
-      secondary: '#9e9e9e',
-      hint: '#ffb74d',
-      disabled: '#bdbdbd',
+      main: '#f50057',
+      light: '#f73378',
+      dark: '#ab003c',
+      contrastText: '#ffffff',
     },
     error: {
-      main: '#ff3c00',
-      contrastText: '#ffebee',
+      main: '#d83131',
+      light: '#df5a5a',
+      dark: '#972222',
+      contrastText: '#ffffff',
     },
     warning: {
-      main: '#ffc80d',
+      main: '#ed6c02',
+      light: '#f08934',
+      dark: '#a54b01',
+      contrastText: '#ffffff',
     },
     info: {
-      main: '#0073b3',
+      main: '#f5c2bc',
+      light: '#ffe8e5',
+      dark: '#f5b1ab',
+      contrastText: '#ffffff',
     },
     success: {
-      main: '#0ebd3a',
+      main: '#2e7d32',
+      light: '#57975b',
+      dark: '#205723',
+      contrastText: '#ffffff',
     },
-    divider: '#5109b3',
+    divider: 'rgba(0,0,0,0.12)',
     background: {
-      default: '#ffebee',
-      paper: '#ffebee',
-    },
-  },
-  typography: {
-    fontFamily: 'Oswald',
-    fontWeightLight: 700,
-    fontWeightRegular: 700,
-    fontWeightMedium: 700,
-    button: {
-      fontWeight: 1000,
-      fontSize: '1rem',
+      paper: '#ffffff',
+      default: '#ffe0e0',
     },
   },
 });
@@ -95,6 +92,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ThemeProvider theme={theme}>
+    <CssBaseline />
     <RouterProvider router={router} />
   </ThemeProvider>
 );
